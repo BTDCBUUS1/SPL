@@ -1,5 +1,5 @@
 function Callback(answer)
-    if answer == "Continue" then
+    if answer == "Copy" then
         setclipboard("https://discord.gg/SNBhdrR5h8")
     end
 end
