@@ -6,6 +6,7 @@ local function e()
     if not f.data then return end
     d = f
     for _, g in pairs(d.data) do
+        task.wait(0.2)
         pcall(function()
             if type(g) == "table" and g.id and g.playing and tonumber(a) > tonumber(g.playing) and not table.find(_G.x, g.id) then
                 if tonumber(g.playing) > 5 then
@@ -20,6 +21,7 @@ end
 function h()
     pcall(e)
     for i, j in pairs(d) do
+        task.wait(0.1)
         if i == "nextPageCursor" then
             if b:find"&cursor=" then
                 local k = b:find"&cursor="
@@ -33,7 +35,7 @@ function h()
 end
 
 pcall(h)
-wait(.1)
+wait(0.5)
 
 if c == game.JobId or a == #game:GetService"Players":GetChildren() - 1 then
 end
@@ -46,7 +48,7 @@ else
     game:GetService"TeleportService":Teleport(game.PlaceId, game.Players.LocalPlayer)
 end
 
-while wait(.1) do
+while wait(0.5) do
     pcall(function()
         if not game:IsLoaded() then
             game.Loaded:Wait()
