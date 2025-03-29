@@ -1,1 +1,3 @@
-return 0;
+local locations = {};
+
+return locations;
