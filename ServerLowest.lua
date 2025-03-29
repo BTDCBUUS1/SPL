@@ -1,3 +1,7 @@
+print("Starting teleport script")
+
+task.wait(0.5)
+
 local a, b, c, d = math.huge, "https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100"
 if not _G.x then _G.x = {} end
 
